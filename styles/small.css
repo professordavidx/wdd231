@@ -54,6 +54,10 @@ header {
   padding: 0;
 }
 
+ul .navigation {
+  color: #fff;
+}
+
 .navigation.open {
   display: block;
 }
