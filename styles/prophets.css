@@ -1,0 +1,57 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f0;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c5e50;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Container for all cards */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Card Styling */
+section {
+  background-color: #ffffff;
+  border: 2px solid #2c5e50;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+section h2 {
+  color: #b8860b; /* Goldenrod color */
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+section p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Image Styling */
+section img {
+  margin-top: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #333;
+  max-width: 100%;
+  height: auto;
+  filter: sepia(20%); /* Adds a slight vintage feel */
+}
