@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333333;
   background-color: #f0f2f5;
@@ -28,6 +28,8 @@ header {
 }
 
 .logo-area h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
   font-size: 1.25rem;
   margin: 0;
   color: #003893; /* Authoritative Colombian Blue Text */
@@ -107,6 +109,8 @@ main {
 }
 
 .title-bar h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
   margin: 0;
   color: #003893;
 }
