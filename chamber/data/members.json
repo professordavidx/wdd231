@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Ecopetrol",
+    "address": "Carrera 13 No. 36 - 24, Bogotá, Colombia",
+    "phone": "(601) 234-5000",
+    "website": "https://www.ecopetrol.com.co",
+    "image": "images/ecopetrol.png",
+    "membershipLevel": 3,
+    "tagline": "Energía que Transforma el Futuro"
+  },
+  {
+    "name": "Bancolombia",
+    "address": "Carrera 48 No. 26 - 85, Medellín, Colombia",
+    "phone": "(604) 510-9000",
+    "website": "https://www.bancolombia.com",
+    "image": "images/bancolombia.png",
+    "membershipLevel": 3,
+    "tagline": "Le Estamos Poniendo el Alma"
+  },
+  {
+    "name": "Juan Valdez Café",
+    "address": "Calle 73 No. 8 - 13, Bogotá, Colombia",
+    "phone": "(601) 326-9269",
+    "website": "https://www.juanvaldezcafe.com",
+    "image": "images/juanvaldez.png",
+    "membershipLevel": 2,
+    "tagline": "El Café de Todo un País"
+  },
+  {
+    "name": "Rappi",
+    "address": "Calle 93 No. 19 - 55, Bogotá, Colombia",
+    "phone": "(601) 744-9123",
+    "website": "https://www.rappi.com.co",
+    "image": "images/rappi.png",
+    "membershipLevel": 2,
+    "tagline": "Corremos por Ti"
+  },
+  {
+    "name": "Avianca",
+    "address": "Calle 26 No. 59 - 15, Bogotá, Colombia",
+    "phone": "(601) 401-3434",
+    "website": "https://www.avianca.com",
+    "image": "images/avianca.png",
+    "membershipLevel": 3,
+    "tagline": "El Cielo es de Todos"
+  },
+  {
+    "name": "Alquería",
+    "address": "Km 5 Vía Cajicá, Zipaquirá, Cundinamarca",
+    "phone": "(601) 884-4000",
+    "website": "https://www.alqueria.com.co",
+    "image": "images/alqueria.png",
+    "membershipLevel": 1,
+    "tagline": "Una Botella de Leche, Una Botella de Alegría"
+  },
+  {
+    "name": "Postobón",
+    "address": "Calle 52 No. 47 - 42, Medellín, Antioquia",
+    "phone": "(604) 220-4000",
+    "website": "https://www.postobon.com",
+    "image": "images/postobon.png",
+    "membershipLevel": 1,
+    "tagline": "Tómate la Vida"
+  }
+]

@@ -1,0 +1,85 @@
+@media screen and (min-width: 768px) {
+  .logo {
+    height: 70px;
+  }
+
+  .logo-area h1 {
+    font-size: 1.6rem;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  nav {
+    display: block !important;
+    margin-top: 0;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #003893; /* Keeps background clean on desktop header layouts */
+    color: #ffffff;
+  }
+
+  .grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .list-view tr {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr 2fr;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Ensures desktop-level rows maintain a clean zebra contrast */
+  .list-view tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+
+  .list-view tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .list-view td {
+    padding: 0.75rem 0.5rem; /* Clean cell spacing on desktop screens */
+  }
+
+  .list-view td {
+    padding: 0.5rem;
+  }
+
+  .list-view td:first-child {
+    font-size: 0.95rem;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-meta {
+    text-align: right;
+    border-top: none;
+    padding-top: 0;
+    width: auto;
+  }
+}

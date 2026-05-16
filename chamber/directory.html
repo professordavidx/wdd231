@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Directory - Colombia Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Official Business Directory of the Colombia Chamber of Commerce. Explore and network with premier organizations driving development throughout Colombia."
+    />
+    <meta name="author" content="David Gomez" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Business Directory - Colombia Chamber of Commerce"
+    />
+    <meta
+      property="og:description"
+      content="Connect with top cross-industry businesses fostering networking and economic progress within Colombia."
+    />
+    <meta
+      property="og:image"
+      content="https://yourusername.github.io/wdd231/chamber/images/og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yourusername.github.io/wdd231/chamber/directory.html"
+    />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-area">
+          <img
+            src="images/logo-colombia.png"
+            alt="Colombia Chamber of Commerce Logo"
+            width="147"
+            height="200"
+            class="logo"
+          />
+          <h1>Colombia Chamber of Commerce</h1>
+        </div>
+        <div class="utility-controls">
+          <button
+            id="menu-toggle"
+            aria-label="Toggle Navigation Menu"
+            class="hamburger-btn"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="title-bar">
+        <h2>Business Directory</h2>
+        <div class="view-toggles">
+          <button
+            id="grid-btn"
+            class="view-active"
+            aria-label="Switch to Grid View"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm8 6h8v-8h-8v8zm2-6h4v4h-4v-4z"
+              />
+            </svg>
+          </button>
+          <button id="list-btn" aria-label="Switch to List View">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-7v2h14V6H7z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <article id="directory-container" class="grid-view"></article>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <strong>Colombia Chamber of Commerce</strong>
+          <p>Carrera 7 # 32-16</p>
+          <p>Bogotá D.C., Colombia</p>
+          <p>info@camaracolombia.org</p>
+          <p>(601) 555-2300</p>
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            aria-label="YouTube Channel"
+            >🎥</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="X Twitter Profile"
+            >🐦</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn Space"
+            >💼</a
+          >
+        </div>
+        <div class="footer-meta">
+          <p>WDD231 Class Project</p>
+          <p>David Gomez</p>
+          <p>
+            &copy; <span id="current-year"></span> Colombia Chamber of Commerce
+          </p>
+          <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

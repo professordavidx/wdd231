@@ -1,0 +1,281 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Structuring */
+header {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 4px solid #fcd116;
+  padding: 1rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-area h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #003893; /* Authoritative Colombian Blue Text */
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.utility-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hamburger-btn {
+  background: #003893;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* Primary Navigation Configuration */
+nav {
+  display: none;
+  margin-top: 1rem;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #003893; /* Links inherit corporate blue */
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ce1126; /* Dynamic Colombian Red Interactive State */
+  color: #ffffff;
+}
+
+/* Layout Content Shells */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #003893;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.title-bar h2 {
+  margin: 0;
+  color: #003893;
+}
+
+.view-toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggles button {
+  background-color: #e0e0e0;
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.view-toggles button.view-active {
+  background-color: #003893;
+  color: #ffffff;
+}
+
+/* Directory Presentation: Card View Variant */
+.grid-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem auto;
+  display: block;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.card .tagline {
+  font-style: italic;
+  color: #595959;
+  margin-bottom: 0.75rem;
+}
+
+.card a {
+  color: #003893;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.card a:hover {
+  color: #ce1126;
+}
+
+/* Directory Presentation: List View Variant */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-view table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background-color: #ffffff; /* Base background card color for the list matrix */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list-view tr {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list-view tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.list-view td {
+  padding: 0.25rem 0;
+  border: none;
+}
+
+.list-view td:first-child {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #003893;
+}
+
+.list-view td.hide-list-attr {
+  display: none;
+}
+
+.list-view td a {
+  color: #003893;
+  text-decoration: underline;
+}
+
+.list-view td a:hover {
+  color: #ce1126;
+}
+
+/* Footer Structuring */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 4px solid #ce1126; /* Steady anchoring line */
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-brand p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-meta {
+  font-size: 0.85rem;
+  border-top: 1px solid #555555;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.footer-meta p {
+  margin: 0.25rem 0;
+}
