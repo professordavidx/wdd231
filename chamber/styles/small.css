@@ -307,9 +307,10 @@ footer {
   text-align: center;
 }
 
-.hero-cta-box h2 {
+.hero-cta-box h1 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
+  color: #003893;
 }
 
 .hero-cta-box p {
@@ -353,8 +354,8 @@ footer {
   box-shadow: 0 4px 6px #0000000d;
 }
 
-.info-card h3,
-.spotlights-wrapper h3 {
+.info-card h2,
+.spotlights-wrapper h2 {
   margin-top: 0;
   color: #003893;
   border-bottom: 2px solid #fcd116;
@@ -449,7 +450,6 @@ footer {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 1.5rem;
-  text-align: center;
   box-shadow: 0 4px 6px #0000000d;
   /* Flexbox alignment ecosystem forces all inner elements to center */
   display: flex;
@@ -496,6 +496,6 @@ footer {
 .loading-msg {
   text-align: center;
   font-style: italic;
-  color: #888888;
+  color: #4f4f4f;
   padding: 2rem 0;
 }
