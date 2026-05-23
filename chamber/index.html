@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Colombia Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Welcome to the Colombia Chamber of Commerce. Discover upcoming events, local weather updates, and premier corporate spotlight partners driving innovation across Colombia."
+    />
+    <meta name="author" content="David Gomez" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Colombia Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Engage with local market leaders and explore economic growth spaces with the Colombia Chamber of Commerce."
+    />
+    <meta
+      property="og:image"
+      content="https://davidgomez.github.io/wdd231/chamber/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:url"
+      content="https://davidgomez.github.io/wdd231/chamber/index.html"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather-spotlight.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-area">
+          <img
+            src="images/logo-colombia.webp"
+            alt="Colombia Chamber of Commerce Logo"
+            width="147"
+            height="200"
+            class="logo"
+          />
+          <h1>Colombia Chamber of Commerce</h1>
+        </div>
+        <div class="utility-controls">
+          <button
+            id="menu-toggle"
+            aria-label="Toggle Navigation Menu"
+            class="hamburger-btn"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="home-main">
+      <section class="hero-block">
+        <picture>
+          <source srcset="images/hero-large.webp" media="(min-width: 768px)" />
+          <img
+            src="images/hero-small.webp"
+            alt="Panoramic view of Bogotá."
+            class="hero-image"
+            width="1200"
+            height="450"
+          />
+        </picture>
+        <div class="hero-cta-box">
+          <h2>Empowering Colombia's Industrial Future</h2>
+          <p>
+            Join our cross-industry network and foster direct market
+            opportunities.
+          </p>
+          <a href="join.html" class="cta-button">Apply for Membership Now</a>
+        </div>
+      </section>
+
+      <div class="home-grid-layout">
+        <section class="info-card events-card">
+          <h3>Upcoming Chamber Events</h3>
+          <ul class="events-list">
+            <li>
+              <span class="event-date">June 04</span>
+              <span class="event-detail"
+                >Bogota International Tech Expo 2026</span
+              >
+            </li>
+            <li>
+              <span class="event-date">June 18</span>
+              <span class="event-detail"
+                >Cross-Border Export Operations Webinar</span
+              >
+            </li>
+            <li>
+              <span class="event-date">July 02</span>
+              <span class="event-detail"
+                >National Commerce Assembly & Networking Gala</span
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="info-card weather-card">
+          <h3>Chamber Weather Forecast</h3>
+          <div id="current-weather-wrapper">
+            <p class="loading-msg">Fetching live weather data stream...</p>
+          </div>
+          <div id="forecast-wrapper"></div>
+        </section>
+      </div>
+
+      <section class="spotlights-wrapper">
+        <h3>Featured Corporate Partners</h3>
+        <div id="spotlights-container">
+          <p class="loading-msg">Selecting premium spotlight directories...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <strong>Colombia Chamber of Commerce</strong>
+          <p>Carrera 7 # 32-16</p>
+          <p>Bogotá D.C., Colombia</p>
+          <p>info@camaracolombia.org</p>
+          <p>(601) 555-2300</p>
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            aria-label="YouTube Channel"
+            >🎥</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="X Twitter Profile"
+            >🐦</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn Space"
+            >💼</a
+          >
+        </div>
+        <div class="footer-meta">
+          <p>WDD231 Class Project</p>
+          <p>David Gomez</p>
+          <p>
+            &copy; <span id="current-year"></span> Colombia Chamber of Commerce
+          </p>
+          <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

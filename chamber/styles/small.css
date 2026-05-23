@@ -283,3 +283,219 @@ footer {
 .footer-meta p {
   margin: 0.25rem 0;
 }
+
+/* Home Page Core Layout Architecture */
+.hero-block {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-cta-box {
+  background-color: rgba(0, 56, 147, 0.9); /* Deep blue with opacity */
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hero-cta-box h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.hero-cta-box p {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #fcd116; /* Colombian Yellow Accent CTA */
+  color: #333333;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.cta-button:hover {
+  background-color: #ce1126; /* Colombian Red shift on interaction */
+  color: #ffffff;
+}
+
+/* Home Grid & Info Containers */
+.home-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3,
+.spotlights-wrapper h3 {
+  margin-top: 0;
+  color: #003893;
+  border-bottom: 2px solid #fcd116;
+  padding-bottom: 0.5rem;
+}
+
+/* Events Presentation Listing */
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.events-list li:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  font-weight: 700;
+  color: #ce1126; /* Vibrant tracking colors */
+  font-size: 0.85rem;
+}
+
+.event-detail {
+  font-size: 0.95rem;
+}
+
+/* Weather Widget Display Modules */
+.current-weather-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fcd116ba;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.weather-desc {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #666666;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+.forecast-day h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.forecast-day p {
+  margin: 0;
+  font-weight: 700;
+  color: #003893;
+}
+
+/* Spotlight Card Presenters */
+.spotlights-wrapper {
+  margin-bottom: 2rem;
+}
+
+#spotlights-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.spotlight-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px #0000000d;
+  /* Flexbox alignment ecosystem forces all inner elements to center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spotlight-card img {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+  margin: 0.5rem auto 1rem auto;
+  display: block;
+}
+
+.spotlight-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.15rem;
+  color: #333333;
+}
+
+.spotlight-tier {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  width: fit-content; /* Keeps the capsule background tight around the text */
+}
+
+.tier-gold {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.tier-silver {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.loading-msg {
+  text-align: center;
+  font-style: italic;
+  color: #888888;
+  padding: 2rem 0;
+}
