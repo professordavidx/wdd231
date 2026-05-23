@@ -98,17 +98,12 @@
     left: 5%;
     transform: translateY(-50%);
     max-width: 450px;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.95
-    ); /* Flip to bright premium contrast */
+    background-color: #fffffff2; /* Flip to bright premium contrast */
     color: #333333;
     text-align: left;
     border-left: 6px solid #003893;
     border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px #00000033;
   }
 
   .hero-cta-box h2 {

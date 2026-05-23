@@ -149,7 +149,7 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px #0000000d;
 }
 
 .card img {
@@ -290,7 +290,7 @@ footer {
   margin-bottom: 2rem;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px #0000001a;
 }
 
 .hero-image {
@@ -301,7 +301,7 @@ footer {
 }
 
 .hero-cta-box {
-  background-color: rgba(0, 56, 147, 0.9); /* Deep blue with opacity */
+  background-color: #003893e6; /* Deep blue with opacity */
   color: #ffffff;
   padding: 1.5rem;
   text-align: center;
@@ -350,7 +350,7 @@ footer {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px #0000000d;
 }
 
 .info-card h3,
@@ -382,7 +382,7 @@ footer {
 .event-date {
   font-weight: 700;
   color: #ce1126; /* Vibrant tracking colors */
-  font-size: 0.85rem;
+  font-size: 1.25rem;
 }
 
 .event-detail {
@@ -409,7 +409,7 @@ footer {
 .weather-desc {
   text-transform: capitalize;
   font-weight: 600;
-  color: #666666;
+  color: #454545;
 }
 
 .forecast-grid {
@@ -423,8 +423,8 @@ footer {
 
 .forecast-day h4 {
   margin: 0 0 0.25rem 0;
-  font-size: 0.85rem;
-  color: #666666;
+  font-size: 1.25rem;
+  color: #ce1126;
 }
 
 .forecast-day p {
@@ -475,7 +475,7 @@ footer {
 
 .spotlight-tier {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -486,7 +486,7 @@ footer {
 
 .tier-gold {
   background-color: #fff3cd;
-  color: #856404;
+  color: #674e04;
 }
 .tier-silver {
   background-color: #e2e3e5;
