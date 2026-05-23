@@ -73,7 +73,7 @@ function renderForecastWeather(data) {
 
     htmlContent += `
             <div class="forecast-day">
-                <h4>${dayLabel}</h4>
+                <h3>${dayLabel}</h3>
                 <p>${Math.round(record.main.temp)}°F</p>
             </div>
         `;
@@ -140,7 +140,7 @@ function renderSpotlights(partners) {
     card.innerHTML = `
             <span class="spotlight-tier ${tierClass}">${tierLabel}</span>
             <img src="${partner.image}" alt="${partner.name} commercial identification logo" width="200" height="200" loading="lazy">
-            <h4>${partner.name}</h4>
+            <h3>${partner.name}</h3>
             <p class="phone-num">📞 ${partner.phone}</p>
             <p class="address-text">${partner.address}</p>
             <a href="${partner.website}" target="_blank" rel="noopener noreferrer" class="partner-link">Visit Corporate Space</a>

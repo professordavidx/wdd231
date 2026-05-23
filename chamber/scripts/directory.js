@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
             <img src="${member.image}" alt="Logo of ${member.name}" width="200" height="200" loading="lazy">
-            <h3>${member.name}</h3>
+            <h2>${member.name}</h2>
             <p class="tagline">"${member.tagline}"</p>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Core Reset & Base Typography
-   ========================================================================== */
 body {
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -10,18 +7,7 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #003893; /* Master Corporate Blue branding */
-  margin: 0 0 0.5rem 0;
-}
-
-/* ==========================================================================
-   Header Architecture
-   ========================================================================== */
+/* Header Structuring */
 header {
   background-color: #ffffff;
   color: #333333;
@@ -46,7 +32,7 @@ header {
   font-weight: 600;
   font-size: 1.25rem;
   margin: 0;
-  color: #003893;
+  color: #003893; /* Authoritative Colombian Blue Text */
 }
 
 .logo {
@@ -71,9 +57,7 @@ header {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Primary Navigation
-   ========================================================================== */
+/* Primary Navigation Configuration */
 nav {
   display: none;
   margin-top: 1rem;
@@ -91,7 +75,7 @@ nav ul {
 
 nav ul li a {
   display: block;
-  color: #003893;
+  color: #003893; /* Links inherit corporate blue */
   text-decoration: none;
   padding: 0.75rem 1rem;
   border-radius: 4px;
@@ -103,13 +87,11 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #ce1126;
+  background-color: #ce1126; /* Dynamic Colombian Red Interactive State */
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Structural Shells & Global Modules
-   ========================================================================== */
+/* Layout Content Shells */
 main {
   padding: 1rem;
   max-width: 1200px;
@@ -127,8 +109,10 @@ main {
 }
 
 .title-bar h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 600;
   margin: 0;
+  color: #003893;
 }
 
 .view-toggles {
@@ -152,9 +136,7 @@ main {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Directory Views (Cards & Matrix Lists)
-   ========================================================================== */
+/* Directory Presentation: Card View Variant */
 .grid-view {
   display: grid;
   grid-template-columns: 1fr;
@@ -178,7 +160,7 @@ main {
   object-fit: contain;
 }
 
-.card h2 {
+.card h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
   color: #333333;
@@ -195,27 +177,19 @@ main {
   margin-bottom: 0.75rem;
 }
 
-.card a,
-.list-view td a {
+.card a {
   color: #003893;
   text-decoration: none;
   font-weight: bold;
-}
-
-.card a {
   display: inline-block;
   margin-top: 0.5rem;
 }
 
-.list-view td a {
-  text-decoration: underline;
-}
-
-.card a:hover,
-.list-view td a:hover {
+.card a:hover {
   color: #ce1126;
 }
 
+/* Directory Presentation: List View Variant */
 .list-view {
   display: flex;
   flex-direction: column;
@@ -226,7 +200,7 @@ main {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  background-color: #ffffff;
+  background-color: #ffffff; /* Base background card color for the list matrix */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -257,9 +231,60 @@ main {
   display: none;
 }
 
-/* ==========================================================================
-   Home Page Core Modules
-   ========================================================================== */
+.list-view td a {
+  color: #003893;
+  text-decoration: underline;
+}
+
+.list-view td a:hover {
+  color: #ce1126;
+}
+
+/* Footer Structuring */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 4px solid #ce1126; /* Steady anchoring line */
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-brand p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-meta {
+  font-size: 0.85rem;
+  border-top: 1px solid #555555;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.footer-meta p {
+  margin: 0.25rem 0;
+}
+
+/* Home Page Core Layout Architecture */
 .hero-block {
   position: relative;
   margin-bottom: 2rem;
@@ -276,19 +301,16 @@ main {
 }
 
 .hero-cta-box {
-  background-color: #003893e6;
+  background-color: #003893e6; /* Deep blue with opacity */
   color: #ffffff;
   padding: 1.5rem;
   text-align: center;
 }
 
 .hero-cta-box h1 {
-  color: #ffffff;
-}
-
-.hero-cta-box h2 {
-  color: #ffffff;
+  margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
+  color: #003893;
 }
 
 .hero-cta-box p {
@@ -298,7 +320,7 @@ main {
 
 .cta-button {
   display: inline-block;
-  background-color: #fcd116;
+  background-color: #fcd116; /* Colombian Yellow Accent CTA */
   color: #333333;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -312,10 +334,11 @@ main {
 }
 
 .cta-button:hover {
-  background-color: #ce1126;
+  background-color: #ce1126; /* Colombian Red shift on interaction */
   color: #ffffff;
 }
 
+/* Home Grid & Info Containers */
 .home-grid-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -334,10 +357,12 @@ main {
 .info-card h2,
 .spotlights-wrapper h2 {
   margin-top: 0;
+  color: #003893;
   border-bottom: 2px solid #fcd116;
   padding-bottom: 0.5rem;
 }
 
+/* Events Presentation Listing */
 .events-list {
   list-style: none;
   padding: 0;
@@ -357,7 +382,7 @@ main {
 
 .event-date {
   font-weight: 700;
-  color: #ce1126;
+  color: #ce1126; /* Vibrant tracking colors */
   font-size: 1.25rem;
 }
 
@@ -365,6 +390,7 @@ main {
   font-size: 0.95rem;
 }
 
+/* Weather Widget Display Modules */
 .current-weather-box {
   display: flex;
   align-items: center;
@@ -396,7 +422,7 @@ main {
   padding-top: 1rem;
 }
 
-.forecast-day h3 {
+.forecast-day h4 {
   margin: 0 0 0.25rem 0;
   font-size: 1.25rem;
   color: #ce1126;
@@ -405,8 +431,10 @@ main {
 .forecast-day p {
   margin: 0;
   font-weight: 700;
+  color: #003893;
 }
 
+/* Spotlight Card Presenters */
 .spotlights-wrapper {
   margin-bottom: 2rem;
 }
@@ -423,6 +451,7 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px #0000000d;
+  /* Flexbox alignment ecosystem forces all inner elements to center */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -438,7 +467,7 @@ main {
   display: block;
 }
 
-.spotlight-card h3 {
+.spotlight-card h4 {
   margin: 0.5rem 0;
   font-size: 1.15rem;
   color: #333333;
@@ -452,7 +481,7 @@ main {
   border-radius: 20px;
   margin-bottom: 0.75rem;
   text-align: center;
-  width: fit-content;
+  width: fit-content; /* Keeps the capsule background tight around the text */
 }
 
 .tier-gold {
@@ -469,50 +498,4 @@ main {
   font-style: italic;
   color: #4f4f4f;
   padding: 2rem 0;
-}
-
-/* ==========================================================================
-   Footer Component Configuration
-   ========================================================================== */
-footer {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-  text-align: center;
-  border-top: 4px solid #ce1126;
-}
-
-.footer-top {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.footer-brand p,
-.footer-meta p {
-  margin: 0.25rem 0;
-}
-
-.footer-brand p {
-  font-size: 0.9rem;
-}
-
-.footer-socials {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.footer-socials a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.footer-meta {
-  font-size: 0.85rem;
-  border-top: 1px solid #555555;
-  padding-top: 1rem;
-  width: 100%;
 }
