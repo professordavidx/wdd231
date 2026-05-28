@@ -30,4 +30,17 @@
   #course-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  dialog {
+    width: 70%;
+    max-width: 650px;
+  }
+
+  .dialog-content {
+    padding: 2rem;
+  }
+
+  .dialog-content h2 {
+    margin: -2rem -2rem 1.5rem;
+  }
 }

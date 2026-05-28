@@ -69,6 +69,7 @@ const courses = [
 
 const container = document.querySelector('#course-container');
 const credits = document.querySelector('#credits');
+const courseDetails = document.querySelector('#course-details');
 
 function displayCourses(courseList) {
   container.innerHTML = '';
@@ -87,12 +88,38 @@ function displayCourses(courseList) {
             <p>${course.title}</p>
         `;
 
+    card.addEventListener('click', () => {
+      displayCourseDetails(course);
+    });
+
     container.appendChild(card);
   });
 
   const total = courseList.reduce((sum, course) => sum + course.credits, 0);
 
   credits.textContent = `The total credits for courses listed above is ${total}`;
+}
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = `
+    <div class="dialog-content">
+      <button id="closeModal" aria-label="Close modal">❌</button>
+      <h2>${course.subject} ${course.number}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    </div>
+  `;
+
+  courseDetails.showModal();
+
+  const closeButton = document.querySelector('#closeModal');
+
+  closeModal.addEventListener('click', () => {
+    courseDetails.close();
+  });
 }
 
 displayCourses(courses);
