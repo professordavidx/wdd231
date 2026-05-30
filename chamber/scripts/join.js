@@ -5,39 +5,42 @@ document.addEventListener('DOMContentLoaded', () => {
     timestampField.value = new Date().toISOString();
   }
 
-  // 2. Modular Overlay Control Infrastructure
-  const openButtons = document.querySelectorAll('.modal-open-btn');
-  const closeButtons = document.querySelectorAll('.modal-close-btn');
+  // 2. Event-Driven Interactivity (Waits for full DOM loading)
+  document.addEventListener('DOMContentLoaded', () => {
+    const openButtons = document.querySelectorAll('.modal-open-btn');
+    const closeButtons = document.querySelectorAll('.modal-close-btn');
 
-  openButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const modalId = button.getAttribute('data-modal');
-      const targetModal = document.getElementById(modalId);
-      if (targetModal) {
-        targetModal.showModal(); // Opens natively with accessible backdrop configuration
+    openButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const targetModal = document.getElementById(modalId);
+        if (targetModal) {
+          targetModal.showModal(); // Opens natively with accessible backdrop configuration
+        }
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const openModal = button.closest('dialog');
+        if (openModal) {
+          openModal.close();
+        }
+      });
+    });
+
+    // Safe escape handler fallback when clicking outside the structural content box
+    window.addEventListener('click', (event) => {
+      try {
+        if (event && event.target && event.target.tagName === 'DIALOG') {
+          event.target.close();
+        }
+      } catch (securityError) {
+        console.warn(
+          'Cross-origin frame click intercepted safely.',
+          securityError,
+        );
       }
     });
-  });
-
-  closeButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const openModal = button.closest('dialog');
-      if (openModal) {
-        openModal.close();
-      }
-    });
-  });
-
-  // Safe escape handler fallback when clicking outside the structural content box
-  window.addEventListener('click', (event) => {
-    try {
-      // Guard check: ensure we can safely read target properties without cross-origin violations
-      if (event && event.target && event.target.tagName === 'DIALOG') {
-        event.target.close();
-      }
-    } catch (securityError) {
-      // Quietly intercept cross-origin frame access exceptions thrown by automated graders
-      console.warn('Cross-origin frame click intercepted safely.');
-    }
   });
 });
