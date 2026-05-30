@@ -124,3 +124,36 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
+
+/* ==========================================================================
+   Membership Layout Modular Modifications (Tablet / Desktop Screens)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .join-page-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .benefits-sidebar {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .benefits-cards-grid {
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
+  }
+
+  /* Keep micro-interactions safe and localized alongside entry transitions */
+  .benefit-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+}

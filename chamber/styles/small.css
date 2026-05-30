@@ -516,3 +516,281 @@ footer {
   padding-top: 1rem;
   width: 100%;
 }
+
+/* ==========================================================================
+   Membership Form & Application Layouts (Mobile Baseline)
+   ========================================================================== */
+.join-page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+form fieldset {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+}
+
+form legend {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: #003893;
+  padding: 0 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: #454545;
+}
+
+form label span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='tel'],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* Accessibility Focus Indicator Enhancements */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #003893;
+  box-shadow: 0 0 0 3px rgba(0, 56, 147, 0.25);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.form-submit-btn {
+  width: 100%;
+  background-color: #fcd116;
+  color: #333333;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.form-submit-btn:hover {
+  background-color: #ce1126;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Membership Level Cards & Initial Page Load Animations
+   ========================================================================== */
+.benefits-sidebar h2 {
+  font-size: 1.35rem;
+  border-bottom: 2px solid #003893;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.benefits-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px #0000000d;
+
+  /* Initial Page Load Eye-Tracking Entrance Animations */
+  opacity: 0;
+  transform: translateY(15px);
+  animation: cardFadeEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggering Element Delivery Delays */
+.benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+  border-left: 5px solid #555555;
+}
+.benefit-card:nth-child(2) {
+  animation-delay: 0.25s;
+  border-left: 5px solid #cd7f32;
+}
+.benefit-card:nth-child(3) {
+  animation-delay: 0.4s;
+  border-left: 5px solid #c0c0c0;
+}
+.benefit-card:nth-child(4) {
+  animation-delay: 0.55s;
+  border-left: 5px solid #ffd700;
+}
+
+@keyframes cardFadeEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.benefit-card p {
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+  color: #555555;
+}
+
+.modal-open-btn {
+  background: none;
+  border: none;
+  color: #003893;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.modal-open-btn:hover {
+  color: #ce1126;
+}
+
+/* ==========================================================================
+   Native Dialog Modals Ecosystem Configuration
+   ========================================================================== */
+.benefit-modal {
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.modal-cost {
+  font-weight: 700;
+  color: #ce1126;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.modal-content ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.modal-close-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  float: right;
+  margin-bottom: 1rem;
+}
+
+.modal-close-btn:hover {
+  background-color: #ce1126;
+}
+
+/* ==========================================================================
+   Thank You Summary Presenter Styles
+   ========================================================================== */
+.thanks-wrapper {
+  text-align: center;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.thanks-lead {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.summary-card h2 {
+  border-bottom: 2px solid #fcd116;
+  border-bottom: 2px solid #fcd116;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  border-bottom: 1px dashed #f0f2f5;
+  padding-bottom: 0.5rem;
+}
+
+.summary-card p:last-child {
+  border-bottom: none;
+}
+
+.summary-card strong {
+  color: #003893;
+  display: inline-block;
+  min-width: 160px;
+}
+
+.thanks-actions {
+  margin-top: 2rem;
+}

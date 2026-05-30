@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Application - Colombia Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Apply for membership with the Colombia Chamber of Commerce. Select a membership tier and join our dynamic national industry network."
+    />
+    <meta name="author" content="David Gomez" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Membership Application - Colombia Chamber of Commerce"
+    />
+    <meta
+      property="og:description"
+      content="Expand your business reach. Secure your membership level with the Colombia Chamber of Commerce today."
+    />
+    <meta
+      property="og:image"
+      content="https://professordavidx.github.io/wdd231/chamber/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:url"
+      content="https://professordavidx.github.io/wdd231/chamber/join.html"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-area">
+          <img
+            src="images/logo-colombia.webp"
+            alt="Colombia Chamber of Commerce Logo"
+            width="147"
+            height="200"
+            class="logo"
+          />
+          <p>Colombia Chamber of Commerce</p>
+        </div>
+        <div class="utility-controls">
+          <button
+            id="menu-toggle"
+            aria-label="Toggle Navigation Menu"
+            class="hamburger-btn"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="title-bar">
+        <h1>Chamber Membership Application</h1>
+      </div>
+
+      <div class="join-page-layout">
+        <div class="form-container">
+          <form method="get" action="thankyou.html" id="membership-form">
+            <fieldset>
+              <legend>Applicant Information</legend>
+              <label title="First Name">
+                <span>First Name *</span>
+                <input
+                  type="text"
+                  name="firstName"
+                  autocomplete="given-name"
+                  required
+                />
+              </label>
+
+              <label title="Last Name">
+                <span>Last Name *</span>
+                <input
+                  type="text"
+                  name="lastName"
+                  autocomplete="family-name"
+                  required
+                />
+              </label>
+
+              <label title="Organizational Title">
+                <span>Organizational Title</span>
+                <input
+                  type="text"
+                  name="orgTitle"
+                  autocomplete="organization-title"
+                  pattern="^[A-Za-z\s\-]{7,}$"
+                  placeholder="e.g., Regional Manager"
+                  title="Minimum 7 characters. Only letters, hyphens, and spaces allowed."
+                />
+              </label>
+
+              <label title="Email Address">
+                <span>Email Address *</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="example@domain.com"
+                  required
+                />
+              </label>
+
+              <label title="Mobile Phone Number">
+                <span>Mobile Phone *</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="e.g., 3001234567"
+                  required
+                />
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Organization Details</legend>
+              <label title="Business or Organization Name">
+                <span>Organization Name *</span>
+                <input
+                  type="text"
+                  name="organization"
+                  autocomplete="organization"
+                  required
+                />
+              </label>
+
+              <label title="Membership Level Selection">
+                <span>Membership Level *</span>
+                <select name="membershipLevel" required>
+                  <option value="" disabled selected>
+                    -- Select a Tier --
+                  </option>
+                  <option value="np">NP Membership (Non-Profit / Free)</option>
+                  <option value="bronze">Bronze Membership</option>
+                  <option value="silver">Silver Membership</option>
+                  <option value="gold">Gold Membership</option>
+                </select>
+              </label>
+
+              <label title="Business or Organization Description">
+                <span>Organization Description</span>
+                <textarea
+                  name="description"
+                  rows="4"
+                  placeholder="Briefly describe your business model and objectives..."
+                ></textarea>
+              </label>
+            </fieldset>
+
+            <input type="hidden" name="timestamp" id="form-timestamp" />
+
+            <input
+              type="submit"
+              value="Apply for Membership"
+              class="form-submit-btn"
+            />
+          </form>
+        </div>
+
+        <section class="benefits-sidebar">
+          <h2>Available Membership Levels</h2>
+          <div class="benefits-cards-grid">
+            <div class="benefit-card level-np">
+              <h3>NP Membership</h3>
+              <p>
+                Tailored exclusively for non-profit and humanitarian
+                organizations.
+              </p>
+              <button
+                type="button"
+                class="modal-open-btn"
+                data-modal="modal-np"
+              >
+                View Benefits &rarr;
+              </button>
+            </div>
+
+            <div class="benefit-card level-bronze">
+              <h3>Bronze Membership</h3>
+              <p>
+                Perfect for growing startups seeking initial corporate
+                networking roots.
+              </p>
+              <button
+                type="button"
+                class="modal-open-btn"
+                data-modal="modal-bronze"
+              >
+                View Benefits &rarr;
+              </button>
+            </div>
+
+            <div class="benefit-card level-silver">
+              <h3>Silver Membership</h3>
+              <p>
+                Enhanced exposure, regular training assemblies, and discount
+                structures.
+              </p>
+              <button
+                type="button"
+                class="modal-open-btn"
+                data-modal="modal-silver"
+              >
+                View Benefits &rarr;
+              </button>
+            </div>
+
+            <div class="benefit-card level-gold">
+              <h3>Gold Membership</h3>
+              <p>
+                Premium access. Absolute brand placement and tier spot listings.
+              </p>
+              <button
+                type="button"
+                class="modal-open-btn"
+                data-modal="modal-gold"
+              >
+                View Benefits &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <dialog id="modal-np" class="benefit-modal">
+      <div class="modal-content">
+        <h3>NP Membership Benefits</h3>
+        <p class="modal-cost">Cost: Free ($0 / Year)</p>
+        <ul>
+          <li>Standard directory listing across public indices.</li>
+          <li>Basic placement in cross-border non-profit listings.</li>
+          <li>Access to general networking assemblies.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Window</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="benefit-modal">
+      <div class="modal-content">
+        <h3>Bronze Membership Benefits</h3>
+        <p class="modal-cost">Cost: $250 / Year</p>
+        <ul>
+          <li>Enhanced directory presence with custom tags.</li>
+          <li>Access to specialized commercial legal workshops.</li>
+          <li>10% discount codes on premium networking galas.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Window</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="benefit-modal">
+      <div class="modal-content">
+        <h3>Silver Membership Benefits</h3>
+        <p class="modal-cost">Cost: $500 / Year</p>
+        <ul>
+          <li>Priority directory ranking.</li>
+          <li>Eligible for homepage spotlight placement sweeps.</li>
+          <li>25% discount rules applied across all regional tech events.</li>
+          <li>2 free passes to the annual National Commerce Assembly.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Window</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="benefit-modal">
+      <div class="modal-content">
+        <h3>Gold Membership Benefits</h3>
+        <p class="modal-cost">Cost: $1,000 / Year</p>
+        <ul>
+          <li>Guaranteed premium home page banner feature slots.</li>
+          <li>Unlimited corporate training registry passes.</li>
+          <li>Full cross-border export operation auditing assistance.</li>
+          <li>VIP booth spaces assigned at the Tech Expo completely free.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Window</button>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <strong>Colombia Chamber of Commerce</strong>
+          <p>Carrera 7 # 32-16</p>
+          <p>Bogotá D.C., Colombia</p>
+          <p>info@camaracolombia.org</p>
+          <p>(601) 555-2300</p>
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            aria-label="YouTube Channel"
+            >🎥</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="X Twitter Profile"
+            >🐦</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn Space"
+            >💼</a
+          >
+        </div>
+        <div class="footer-meta">
+          <p>WDD231 Class Project</p>
+          <p>David Gomez</p>
+          <p>
+            &copy; <span id="current-year"></span> Colombia Chamber of Commerce
+          </p>
+          <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
