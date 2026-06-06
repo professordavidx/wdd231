@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Regional Gems - Colombia Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Explore regional attractions, landmarks, and demographics within our Chamber network."
+    />
+    <meta name="author" content="David Gomez" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo-area">
+          <img
+            src="images/logo-colombia.webp"
+            alt="Chamber Logo"
+            width="147"
+            height="200"
+            class="logo"
+          />
+          <p>Colombia Chamber of Commerce</p>
+        </div>
+        <button
+          id="menu-toggle"
+          aria-label="Toggle Navigation Menu"
+          class="hamburger-btn"
+        >
+          ☰
+        </button>
+      </div>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="discover-main-layout">
+      <aside class="sidebar-metrics">
+        <div class="metric-card user-visit-tracker">
+          <p id="visitor-message" class="visit-message-text">
+            Analyzing your last session signature...
+          </p>
+        </div>
+      </aside>
+
+      <section class="gallery-showcase">
+        <h1>Explore Our Region</h1>
+        <div id="discover-grid-container" class="discover-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <strong>Colombia Chamber of Commerce</strong>
+          <p>Carrera 7 # 32-16</p>
+          <p>Bogotá D.C., Colombia</p>
+          <p>info@camaracolombia.org</p>
+          <p>(601) 555-2300</p>
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            aria-label="YouTube Channel"
+            >🎥</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            aria-label="X Twitter Profile"
+            >🐦</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn Space"
+            >💼</a
+          >
+        </div>
+        <div class="footer-meta">
+          <p>WDD231 Class Project</p>
+          <p>David Gomez</p>
+          <p>
+            &copy; <span id="current-year"></span> Colombia Chamber of Commerce
+          </p>
+          <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

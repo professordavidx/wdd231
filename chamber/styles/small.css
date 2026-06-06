@@ -793,3 +793,101 @@ form textarea {
 .thanks-actions {
   margin-top: 2rem;
 }
+
+/* ==========================================================================
+   Discover Page Mobile Baseline Rules (Small Screens: 320px - 640px)
+   ========================================================================== */
+.discover-main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.metric-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px #0000000d;
+}
+
+.visit-message-text {
+  font-weight: 600;
+  color: #ce1126;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0.5rem;
+}
+
+/* Named Areas Layout Strategy Grid Definition */
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Individual Card Structural Stack */
+.discover-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.discover-card h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.discover-card figure {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.discover-card img {
+  height: 200px;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.discover-card p {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #333333;
+  flex-grow: 1;
+}
+
+.discover-card address {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.discover-card button {
+  background-color: #fcd116;
+  color: #333333;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.discover-card button:hover {
+  background-color: #ce1126;
+  color: #ffffff;
+}

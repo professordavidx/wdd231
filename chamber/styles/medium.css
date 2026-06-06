@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Medium Screen Layout Mapping Rules (641px - 1024px)
+   ========================================================================== */
+@media screen and (min-width: 641px) {
+  /* Transform the card itself into an internal grid matrix */
+  .discover-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      'card-title card-title'
+      'card-img   card-desc'
+      'card-img   card-addr'
+      'card-btn   card-btn';
+    gap: 1rem;
+    align-items: start;
+  }
+
+  /* Structural area assignments for accurate layout alignment */
+  .discover-card h2 {
+    grid-area: card-title;
+  }
+  .discover-card figure {
+    grid-area: card-img;
+    margin: 0;
+  }
+  .discover-card p {
+    grid-area: card-desc;
+  }
+  .discover-card address {
+    grid-area: card-addr;
+  }
+  .discover-card button {
+    grid-area: card-btn;
+    width: 100%;
+  }
+}
