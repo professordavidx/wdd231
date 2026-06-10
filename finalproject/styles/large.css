@@ -28,4 +28,51 @@
   .hero {
     padding: 3rem;
   }
+
+  .learn-more-btn {
+    width: auto;
+  }
+
+  /* Modal */
+  dialog {
+    width: min(90%, 600px);
+    padding: 0;
+    border: 2px solid #0b0a09;
+    background-color: #dbc0ae;
+  }
+
+  dialog::backdrop {
+    background-color: rgba(11, 10, 9, 0.8);
+  }
+
+  .modal-header {
+    background-color: #0b0a09;
+    color: #eca923;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+  }
+
+  .modal-header h3 {
+    margin: 0;
+  }
+
+  #close-modal {
+    background: none;
+    border: none;
+    color: #eca923;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-content p {
+    margin-bottom: 1rem;
+  }
 }

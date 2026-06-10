@@ -1,7 +1,10 @@
 import './navigation.mjs';
 import { loadFeaturedCreatures } from './featured.mjs';
+import { initializeModal } from './modal.mjs';
 
-loadFeaturedCreatures();
+const creatures = await loadFeaturedCreatures();
+
+initializeModal(creatures);
 
 document.querySelector('#current-year').textContent = new Date().getFullYear();
 
