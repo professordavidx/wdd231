@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mythic Bestiary | Discover Legendary Creatures</title>
+
+    <meta
+      name="description"
+      content="Explore mythical creatures from cultures around the world. Learn about their origins, powers, and legends in the Mythic Bestiary."
+    />
+    <meta name="author" content="David Gomez" />
+
+    <meta property="og:title" content="Mythic Bestiary" />
+    <meta
+      property="og:description"
+      content="A collection of legendary creatures from mythologies around the world."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Mythic Bestiary</h1>
+
+      <button id="menu-button" aria-label="Open navigation menu">☰</button>
+
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="compendium.html">Compendium</a></li>
+          <li><a href="submissions.html">Submissions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Discover Legendary Creatures from Around the World</h2>
+
+        <p>
+          Explore dragons, phoenixes, kitsune, and countless other beings that
+          have inspired myths, folklore, and legends for centuries.
+        </p>
+
+        <a href="compendium.html" class="hero-button">
+          Explore the Compendium
+        </a>
+      </section>
+
+      <section>
+        <h2>What Is Mythic Bestiary?</h2>
+
+        <p>
+          Mythic Bestiary is a collection of mythical creatures gathered from
+          cultures across the globe. Each entry provides information about a
+          creature's origins, abilities, symbolism, and place within mythology.
+        </p>
+      </section>
+
+      <section>
+        <h2>Featured Creatures</h2>
+
+        <div id="featured-creatures" class="featured-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </section>
+
+      <section>
+        <h2>About the Collection</h2>
+
+        <p>
+          From the dragons of Asia to the monsters of Greek mythology, legendary
+          creatures have shaped stories and traditions throughout human history.
+          This collection highlights creatures from many cultures and
+          mythological traditions.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="current-year"></span> Mythic Bestiary</p>
+
+      <p id="last-modified"></p>
+
+      <p>
+        <a href="attributions.html">Attributions</a>
+      </p>
+    </footer>
+
+    <script type="module" src="scripts/main.mjs"></script>
+  </body>
+</html>
