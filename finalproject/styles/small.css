@@ -65,6 +65,12 @@ section {
 /* Navigation */
 /* -------------------- */
 
+header img {
+  width: 64px;
+  height: 64px;
+  display: none;
+}
+
 #menu-button {
   background-color: #eca923;
   color: #0b0a09;
