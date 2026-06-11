@@ -1,3 +1,7 @@
+/* -------------------- */
+/* Large Screen Styles */
+/* -------------------- */
+
 @media screen and (min-width: 768px) {
   header {
     display: flex;
@@ -21,15 +25,55 @@
     padding: 2rem;
   }
 
-  .featured-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .hero {
     padding: 3rem;
   }
 
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+
+  .featured-grid .creature-card:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .creature-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .creature-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .creature-card h3 {
+    min-height: 4rem;
+  }
+
+  .origin {
+    min-height: 3rem;
+  }
+
+  .creature-card-description {
+    min-height: 7rem;
+  }
+
+  .creature-card h3,
+  .origin,
+  .creature-card-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .learn-more-btn {
+    margin-top: auto;
     width: auto;
   }
 
@@ -41,38 +85,11 @@
     background-color: #dbc0ae;
   }
 
-  dialog::backdrop {
-    background-color: rgba(11, 10, 9, 0.8);
-  }
-
-  .modal-header {
-    background-color: #0b0a09;
-    color: #eca923;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem;
-  }
-
   .modal-header h3 {
     margin: 0;
   }
 
-  #close-modal {
-    background: none;
-    border: none;
-    color: #eca923;
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
-
   .modal-content {
     padding: 1.5rem;
-  }
-
-  .modal-content p {
-    margin-bottom: 1rem;
   }
 }

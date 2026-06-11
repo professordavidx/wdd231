@@ -1,3 +1,7 @@
+/* -------------------- */
+/* Global Styles */
+/* -------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +15,9 @@ body {
   line-height: 1.6;
 }
 
-header,
-footer {
-  background-color: #0b0a09;
-  text-align: center;
-  padding: 1rem;
-}
+/* -------------------- */
+/* Typography */
+/* -------------------- */
 
 h1,
 h2,
@@ -34,6 +35,17 @@ h2 {
   border-bottom: 2px solid #eca923;
 }
 
+/* -------------------- */
+/* Layout */
+/* -------------------- */
+
+header,
+footer {
+  background-color: #0b0a09;
+  text-align: center;
+  padding: 1rem;
+}
+
 main {
   padding: 1rem;
 }
@@ -45,6 +57,10 @@ section {
   padding: 1rem;
   margin-bottom: 1.5rem;
 }
+
+/* -------------------- */
+/* Navigation */
+/* -------------------- */
 
 #menu-button {
   background-color: #eca923;
@@ -73,9 +89,15 @@ section {
   text-decoration: none;
 }
 
-.active {
+#primary-nav a.active {
   color: #eca923;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
+
+/* -------------------- */
+/* Hero Section */
+/* -------------------- */
 
 .hero {
   text-align: center;
@@ -92,12 +114,22 @@ section {
   color: #0b0a09;
   text-decoration: none;
   padding: 0.75rem 1.25rem;
+  border: 2px solid #0b0a09;
+  font-family: 'Cinzel', serif;
   font-weight: bold;
 }
+
+/* -------------------- */
+/* Featured Creatures */
+/* -------------------- */
 
 .featured-grid {
   display: grid;
   gap: 1rem;
+}
+
+.featured-grid .creature-card:nth-child(3) {
+  display: none;
 }
 
 .creature-card {
@@ -145,6 +177,10 @@ section {
   width: 100%;
 }
 
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+
 footer {
   color: #ffffff;
 }
@@ -153,7 +189,10 @@ footer a {
   color: #eca923;
 }
 
-/* Modal */
+/* -------------------- */
+/* Modal Dialog */
+/* -------------------- */
+
 dialog {
   width: calc(100% - 2rem);
   max-width: 500px;

@@ -41,7 +41,7 @@ export async function loadFeaturedCreatures() {
 
               <p class="origin">${creature.origin}</p>
 
-              <p>${creature.shortDescription}</p>
+              <p class="creature-card-description">${creature.shortDescription}</p>
 
               <button
                 class="learn-more-btn"
