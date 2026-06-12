@@ -185,7 +185,7 @@ header img {
   font-family: 'Cinzel', serif;
   font-weight: 600;
   font-size: 1rem;
-  width: 90%;
+  width: 80%;
 }
 
 /* -------------------- */
@@ -255,6 +255,10 @@ dialog::backdrop {
 /* -------------------- */
 /* Compendium */
 /* -------------------- */
+#favorites-container {
+  display: grid;
+  gap: 1rem;
+}
 
 .region-section {
   margin-bottom: 1.5rem;
