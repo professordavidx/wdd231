@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mythic Bestiary | Compendium</title>
+
+    <meta
+      name="description"
+      content="Browse a collection of mythical creatures from cultures around the world. Explore their origins, symbolism, and legendary stories."
+    />
+
+    <meta name="author" content="David Gomez" />
+
+    <meta property="og:title" content="Mythic Bestiary Compendium" />
+
+    <meta
+      property="og:description"
+      content="Explore legendary creatures from mythologies and folklore around the world."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:image"
+      content="https://professordavidx.github.io/wdd231/finalproject/images/og-image.png"
+    />
+
+    <meta
+      property="og:url"
+      content="https://professordavidx.github.io/wdd231/finalproject/compendium.html"
+    />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <script type="module" src="scripts/compendium.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="images/logo.webp"
+        alt="Mythic Bestiary logo"
+        width="256"
+        height="256"
+      />
+
+      <p class="site-title">Mythic Bestiary</p>
+
+      <button id="menu-button" aria-label="Open navigation menu">☰</button>
+
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+
+          <li>
+            <a href="compendium.html" class="active"> Compendium </a>
+          </li>
+
+          <li><a href="submissions.html">Submissions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Mythical Creature Compendium</h1>
+
+        <p>
+          Explore legendary beings from mythologies, folklore, and oral
+          traditions around the world.
+        </p>
+      </section>
+
+      <section id="favorites-section">
+        <h2>Favorites</h2>
+
+        <div id="favorites-container"></div>
+
+        <p id="no-favorites-message">
+          You have not selected any favorites yet. Click the heart icon on any
+          creature to add it to your favorites. Your selections will appear here
+          the next time the page loads.
+        </p>
+      </section>
+
+      <div id="compendium-container">
+        <!-- Generated dynamically -->
+      </div>
+
+      <dialog id="creature-modal" class="compendium-modal">
+        <div class="modal-header">
+          <h3 id="modal-name"></h3>
+
+          <button id="close-modal" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="modal-content">
+          <img id="modal-image" src="" alt="" />
+
+          <p>
+            <strong>Origin:</strong>
+            <span id="modal-origin"></span>
+          </p>
+
+          <p>
+            <strong>Type:</strong>
+            <span id="modal-type"></span>
+          </p>
+
+          <p>
+            <strong>Ability:</strong>
+            <span id="modal-ability"></span>
+          </p>
+
+          <p>
+            <strong>Symbolism:</strong>
+            <span id="modal-symbolism"></span>
+          </p>
+
+          <p id="modal-description"></p>
+        </div>
+      </dialog>
+    </main>
+
+    <footer>
+      <p>
+        &copy;
+        <span id="current-year"></span>
+        Mythic Bestiary
+      </p>
+
+      <p id="last-modified"></p>
+
+      <p>
+        <a href="attributions.html"> Attributions </a>
+      </p>
+    </footer>
+  </body>
+</html>

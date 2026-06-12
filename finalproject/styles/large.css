@@ -81,12 +81,34 @@
     width: auto;
   }
 
-  /* Modal */
   dialog {
     width: min(90%, 600px);
   }
 
   .modal-content {
     padding: 1.5rem;
+  }
+
+  /* -------------------- */
+  /* Compendium */
+  /* -------------------- */
+
+  .compendium-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+
+  .compendium-card img {
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .compendium-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .compendium-card-footer {
+    margin-top: auto;
   }
 }

@@ -251,3 +251,127 @@ dialog::backdrop {
 .modal-content p {
   margin-bottom: 1rem;
 }
+
+/* -------------------- */
+/* Compendium */
+/* -------------------- */
+
+.region-section {
+  margin-bottom: 1.5rem;
+}
+
+.region-toggle {
+  width: 100%;
+  background-color: #0b0a09;
+  color: #eca923;
+  border: none;
+  padding: 1rem;
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.region-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+.region-toggle.open .arrow {
+  transform: rotate(180deg);
+}
+
+.region-content {
+  display: grid;
+  gap: 1rem;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+
+  padding: 0 0.5rem;
+}
+
+.region-content.open {
+  max-height: 5000px;
+  padding: 1rem 0.5rem;
+}
+
+#no-favorites-message {
+  text-align: center;
+  font-style: italic;
+}
+
+.compendium-card {
+  background-color: #dbc0ae;
+  border: 2px solid #0b0a09;
+  overflow: hidden;
+}
+
+.compendium-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.compendium-card-content {
+  padding: 1rem;
+}
+
+.compendium-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.compendium-card .origin {
+  margin-bottom: 0.75rem;
+}
+
+.compendium-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.favorite-btn:hover::after {
+  content: ' Add to Favorites';
+  font-size: 0.9rem;
+  font-family: 'Lora', serif;
+}
+
+.favorite-btn.active {
+  color: #eca923;
+}
+
+.favorite-btn.active:hover::after {
+  content: ' Remove Favorite';
+}
+
+.compendium-modal img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#modal-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+}
