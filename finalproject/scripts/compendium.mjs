@@ -18,11 +18,13 @@ function toggleFavorite(id, button) {
 
     button.textContent = '♡';
     button.classList.remove('active');
+    button.title = 'Add to Favorites';
   } else {
     favorites.push(id);
 
-    button.textContent = '♥';
+    button.textContent = '❤';
     button.classList.add('active');
+    button.title = 'Remove Favorite';
   }
 
   saveFavorites(favorites);
@@ -58,8 +60,9 @@ function createCreatureCard(creature) {
         class="favorite-btn ${isFavorite(creature.id) ? 'active' : ''}"
         data-id="${creature.id}"
         aria-label="Toggle favorite"
+        title="${isFavorite(creature.id) ? 'Remove Favorite' : 'Add to Favorites'}"
       >
-        ${isFavorite(creature.id) ? '♥' : '♡'}
+        ${isFavorite(creature.id) ? '❤' : '♡'}
       </button>
     </div>
   </div>

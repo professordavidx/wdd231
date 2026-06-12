@@ -108,6 +108,10 @@
     flex-direction: column;
   }
 
+  .compendium-card-description {
+    margin-bottom: 1rem;
+  }
+
   .compendium-card-footer {
     margin-top: auto;
   }
