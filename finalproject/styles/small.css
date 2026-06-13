@@ -13,6 +13,10 @@ body {
   color: #1d1d1d;
   font-family: 'Lora', serif;
   line-height: 1.6;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* -------------------- */
@@ -51,6 +55,7 @@ footer {
 
 main {
   padding: 1rem;
+  flex: 1;
 }
 
 main > section {
@@ -260,6 +265,10 @@ dialog::backdrop {
   gap: 1rem;
 }
 
+#compendium-container {
+  min-height: 500px;
+}
+
 .region-section {
   margin-bottom: 1.5rem;
 }
@@ -377,4 +386,72 @@ dialog::backdrop {
   object-fit: cover;
   display: block;
   margin-bottom: 1rem;
+}
+
+/* -------------------- */
+/* Suggestions Form */
+/* -------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  border: 2px solid #0b0a09;
+}
+
+.form-submit {
+  margin-top: 1rem;
+
+  background-color: #eca923;
+  color: #0b0a09;
+
+  cursor: pointer;
+
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+}
+
+/* -------------------- */
+/* Suggestion Received */
+/* -------------------- */
+
+.suggestion-results {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#submission-results {
+  margin: 1.5rem 0;
+}
+
+.result-item {
+  margin-bottom: 1rem;
+}
+
+.result-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+}
+
+.centered-button {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  text-align: center;
 }

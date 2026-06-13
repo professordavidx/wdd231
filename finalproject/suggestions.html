@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mythic Bestiary | Suggestions</title>
+
+    <meta
+      name="description"
+      content="Suggest a mythical creature to be added to the Mythic Bestiary."
+    />
+
+    <meta name="author" content="David Gomez" />
+
+    <meta property="og:title" content="Mythic Bestiary Suggestions" />
+
+    <meta
+      property="og:description"
+      content="Share your favorite legendary creature with the Mythic Bestiary."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:image"
+      content="https://professordavidx.github.io/wdd231/finalproject/images/og-image.png"
+    />
+
+    <meta
+      property="og:url"
+      content="https://professordavidx.github.io/wdd231/finalproject/suggestions.html"
+    />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <script type="module" src="scripts/main.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="images/logo.webp"
+        alt="Mythic Bestiary logo"
+        width="256"
+        height="256"
+      />
+
+      <p class="site-title">Mythic Bestiary</p>
+
+      <button id="menu-button" aria-label="Open navigation menu">☰</button>
+
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="compendium.html">Compendium</a></li>
+          <li><a href="suggestions.html" class="active">Suggestions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Suggest a Creature</h1>
+
+        <p>
+          Know a legendary creature that belongs in the Mythic Bestiary? Share
+          it with us.
+        </p>
+      </section>
+
+      <section>
+        <h2>Creature Suggestion Form</h2>
+
+        <form action="suggestion-received.html" method="get">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="creature">Creature Name</label>
+          <input type="text" id="creature" name="creature" required />
+
+          <label for="region">Region</label>
+          <select id="region" name="region" required>
+            <option value="">Select a Region</option>
+            <option>Africa</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Middle East</option>
+            <option>North America</option>
+            <option>Oceania</option>
+            <option>South America</option>
+            <option>Other</option>
+          </select>
+
+          <label for="origin">Origin / Culture</label>
+          <input type="text" id="origin" name="origin" required />
+
+          <label for="type">Creature Type</label>
+          <input type="text" id="type" name="type" required />
+
+          <label for="ability">Special Ability</label>
+          <input type="text" id="ability" name="ability" required />
+
+          <label for="symbolism">Symbolism</label>
+          <input type="text" id="symbolism" name="symbolism" required />
+
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="6"
+            required
+          ></textarea>
+
+          <input type="submit" value="Send Suggestion" class="form-submit" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="current-year"></span> Mythic Bestiary</p>
+      <p id="last-modified"></p>
+      <p>
+        <a href="attributions.html">Attributions</a>
+      </p>
+    </footer>
+  </body>
+</html>

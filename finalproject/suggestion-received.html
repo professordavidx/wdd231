@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mythic Bestiary | Suggestion Received</title>
+
+    <meta
+      name="description"
+      content="Confirmation page for creature suggestions submitted to the Mythic Bestiary."
+    />
+
+    <meta name="author" content="David Gomez" />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <script type="module" src="scripts/suggestion-received.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="images/logo.webp"
+        alt="Mythic Bestiary logo"
+        width="256"
+        height="256"
+      />
+
+      <p class="site-title">Mythic Bestiary</p>
+
+      <button id="menu-button" aria-label="Open navigation menu">☰</button>
+
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="compendium.html">Compendium</a></li>
+          <li><a href="suggestions.html" class="active">Suggestions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="suggestion-results">
+        <h1>Thank You!</h1>
+
+        <p>Your creature suggestion has been received.</p>
+
+        <div id="submission-results"></div>
+
+        <p>
+          <a href="suggestions.html" class="hero-button centered-button">
+            Suggest Another Creature
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="current-year"></span> Mythic Bestiary</p>
+      <p id="last-modified"></p>
+      <p>
+        <a href="attributions.html">Attributions</a>
+      </p>
+    </footer>
+  </body>
+</html>

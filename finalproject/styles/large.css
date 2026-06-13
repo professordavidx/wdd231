@@ -115,4 +115,28 @@
   .compendium-card-footer {
     margin-top: auto;
   }
+
+  /* -------------------- */
+  /* Suggestion Received */
+  /* -------------------- */
+
+  .suggestion-results {
+    max-width: 900px;
+  }
+
+  .result-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dbc0ae;
+  }
+
+  .result-item:last-child {
+    border-bottom: none;
+  }
+
+  .result-label {
+    margin: 0;
+  }
 }

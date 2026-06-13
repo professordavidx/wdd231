@@ -1,3 +1,6 @@
+import './navigation.mjs';
+import './site-info.mjs';
+
 function getFavorites() {
   return JSON.parse(localStorage.getItem('favorites')) || [];
 }
@@ -214,14 +217,5 @@ async function loadCompendium() {
 `;
   }
 }
-
-document.querySelector('#menu-button').addEventListener('click', () => {
-  document.querySelector('#primary-nav').classList.toggle('open');
-});
-
-document.querySelector('#current-year').textContent = new Date().getFullYear();
-
-document.querySelector('#last-modified').textContent =
-  `Last Modified: ${document.lastModified}`;
 
 loadCompendium();
