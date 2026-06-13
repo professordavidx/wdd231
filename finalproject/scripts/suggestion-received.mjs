@@ -1,10 +1,16 @@
+// Shared modules used across multiple pages.
 import './navigation.mjs';
 import './site-info.mjs';
 
+// Read submitted form values from the URL query string.
+//
+// The suggestion form uses the GET method so submitted
+// values can be displayed on this confirmation page.
 const params = new URLSearchParams(window.location.search);
 
 const container = document.querySelector('#submission-results');
-
+// Dynamically display all submitted values so users can
+// review the information they provided.
 container.innerHTML = `
   <div class="result-item">
     <span class="result-label">Name</span>

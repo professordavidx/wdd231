@@ -1,6 +1,9 @@
+// Shared modules used across the site.
 import './navigation.mjs';
 import './site-info.mjs';
 
+// Favorites are stored in localStorage so selections persist
+// between visits and page reloads.
 function getFavorites() {
   return JSON.parse(localStorage.getItem('favorites')) || [];
 }
@@ -13,6 +16,8 @@ function isFavorite(id) {
   return getFavorites().includes(id);
 }
 
+// Adds or removes a creature from localStorage and updates
+// the heart icon to reflect the current state.
 function toggleFavorite(id, button) {
   let favorites = getFavorites();
 
@@ -33,6 +38,10 @@ function toggleFavorite(id, button) {
   saveFavorites(favorites);
 }
 
+// Generates a single compendium card using template literals.
+//
+// Cards are created dynamically from JSON data rather than
+// existing as static HTML.
 function createCreatureCard(creature) {
   return ` <article class="compendium-card"> <img
      src="${creature.image}"
@@ -74,6 +83,9 @@ function createCreatureCard(creature) {
 `;
 }
 
+// Groups creatures by geographic region.
+//
+// Each region can be expanded or collapsed independently.
 function createRegionSection(region, creatures) {
   return ` <section class="region-section"> <button
      class="region-toggle"
@@ -91,30 +103,33 @@ function createRegionSection(region, creatures) {
 `;
 }
 
+// Populates the compendium modal with detailed creature
+// information, including the full description.
 function populateModal(creature) {
   document.querySelector('#modal-name').textContent = creature.name;
-
   document.querySelector('#modal-image').src = creature.image;
-
   document.querySelector('#modal-image').alt = creature.name;
-
   document.querySelector('#modal-origin').textContent = creature.origin;
-
   document.querySelector('#modal-type').textContent = creature.type;
-
   document.querySelector('#modal-ability').textContent = creature.ability;
-
   document.querySelector('#modal-symbolism').textContent = creature.symbolism;
-
   document.querySelector('#modal-description').textContent =
     creature.fullDescription;
 }
 
+// Main compendium initialization function.
+//
+// Demonstrates:
+// - Fetch API
+// - try/catch error handling
+// - dynamic content generation
+// - localStorage
+// - DOM manipulation
+// - event handling
+// - array methods
 async function loadCompendium() {
   const container = document.querySelector('#compendium-container');
-
   const favoritesContainer = document.querySelector('#favorites-container');
-
   const noFavoritesMessage = document.querySelector('#no-favorites-message');
 
   try {
@@ -125,16 +140,15 @@ async function loadCompendium() {
     }
 
     const creatures = await response.json();
-
     const favoriteIds = getFavorites();
-
+    // Use the filter array method to identify which creatures
+    // have previously been saved as favorites.
     const favorites = creatures.filter((creature) =>
       favoriteIds.includes(creature.id),
     );
 
     if (favorites.length > 0) {
       favoritesContainer.innerHTML = favorites.map(createCreatureCard).join('');
-
       noFavoritesMessage.style.display = 'none';
     } else {
       noFavoritesMessage.style.display = 'block';
@@ -142,6 +156,7 @@ async function loadCompendium() {
 
     const regions = {};
 
+    // Organize creatures into region groups for display.
     creatures.forEach((creature) => {
       if (!regions[creature.region]) {
         regions[creature.region] = [];
@@ -150,32 +165,34 @@ async function loadCompendium() {
       regions[creature.region].push(creature);
     });
 
+    // Convert grouped region data into HTML sections.
     container.innerHTML = Object.entries(regions)
       .map(([region, regionCreatures]) =>
         createRegionSection(region, regionCreatures),
       )
       .join('');
 
+    // Attach favorite functionality to every heart button.
     document.querySelectorAll('.favorite-btn').forEach((button) => {
       button.addEventListener('click', () => {
         toggleFavorite(Number(button.dataset.id), button);
       });
     });
 
+    // Expand or collapse a region when its heading is clicked.
     document.querySelectorAll('.region-toggle').forEach((button) => {
       button.addEventListener('click', () => {
         const content = button.nextElementSibling;
 
         button.classList.toggle('open');
-
         content.classList.toggle('open');
-
         const expanded = button.classList.contains('open');
-
         button.setAttribute('aria-expanded', expanded);
       });
     });
 
+    // Open the detailed creature modal when a user
+    // requests additional information.
     const modal = document.querySelector('#creature-modal');
 
     document.querySelectorAll('.learn-more-btn').forEach((button) => {
@@ -185,7 +202,6 @@ async function loadCompendium() {
         );
 
         populateModal(creature);
-
         modal.showModal();
       });
     });
@@ -208,6 +224,7 @@ async function loadCompendium() {
       }
     });
   } catch (error) {
+    // Gracefully handle fetch failures.
     console.error(error);
 
     container.innerHTML = `
@@ -218,4 +235,5 @@ async function loadCompendium() {
   }
 }
 
+// Initialize the compendium page.
 loadCompendium();

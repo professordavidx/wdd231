@@ -1,3 +1,7 @@
+// Handles the modal dialog used on the home page.
+//
+// Creature information is loaded dynamically based on the
+// card selected by the user.
 export function initializeModal(creatures) {
   const modal = document.querySelector('#creature-modal');
 
@@ -15,6 +19,8 @@ export function initializeModal(creatures) {
 
   const modalDescription = document.querySelector('#modal-description');
 
+  // Event delegation is used so all current and future
+  // "Learn More" buttons can be handled through a single listener.
   document.addEventListener('click', (event) => {
     const button = event.target.closest('.learn-more-btn');
 
@@ -22,6 +28,8 @@ export function initializeModal(creatures) {
       return;
     }
 
+    // Find the matching creature and populate the modal
+    // with additional information from the JSON dataset.
     const creatureId = Number(button.dataset.id);
 
     const creature = creatures.find((c) => c.id === creatureId);
@@ -31,20 +39,17 @@ export function initializeModal(creatures) {
     }
 
     modalName.textContent = creature.name;
-
     modalOrigin.textContent = creature.origin;
-
     modalType.textContent = creature.type;
-
     modalAbility.textContent = creature.ability;
-
     modalSymbolism.textContent = creature.symbolism;
-
     modalDescription.textContent = creature.mediumDescription;
 
     modal.showModal();
   });
 
+  // Improves usability by allowing the dialog to close
+  // when the user clicks outside the modal window.
   closeButton.addEventListener('click', () => {
     modal.close();
   });

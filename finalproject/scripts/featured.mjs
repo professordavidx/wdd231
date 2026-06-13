@@ -1,3 +1,7 @@
+// Randomizes an array using a shuffle algorithm.
+//
+// The home page displays three random creatures each time it loads,
+// helping showcase different entries from the compendium.
 function shuffleArray(array) {
   const shuffled = [...array];
 
@@ -10,10 +14,15 @@ function shuffleArray(array) {
   return shuffled;
 }
 
+// Retrieves creature data from the local JSON file using Fetch API.
+//
+// This fulfills the project requirement to load external data
+// asynchronously and generate content dynamically.
 export async function loadFeaturedCreatures() {
   const container = document.querySelector('#featured-creatures');
 
   try {
+    // Container where the featured creature cards will be inserted.
     const response = await fetch('data/creatures.json');
 
     if (!response.ok) {
@@ -22,8 +31,9 @@ export async function loadFeaturedCreatures() {
 
     const creatures = await response.json();
 
+    // Select three random creatures and generate their cards
+    // using template literals.
     const featuredCreatures = shuffleArray(creatures).slice(0, 3);
-
     container.innerHTML = featuredCreatures
       .map(
         (creature) => `
@@ -59,6 +69,8 @@ export async function loadFeaturedCreatures() {
   } catch (error) {
     console.error(error);
 
+    // Display a user-friendly message if the JSON file
+    // cannot be loaded.
     container.innerHTML = `
       <p class="error-message">
         Featured creatures could not be loaded at this time.
